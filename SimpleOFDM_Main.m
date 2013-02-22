@@ -20,7 +20,15 @@ switch SystemParams.bandwidth
         SystemParams.rbGridSize = 75;
     case 20*10^6        
         SystemParams.rbGridSize = 100;
-    
 end
+% for nomal cyclic prefix mode
+SystemParams.Tg = zeros(1, 2);
+SystemParams.Tg(1) = 160 / (15e3*2048); % duration of first ofdm symbol in slot
+SystemParams.Tg(2) = 144 / (15e3*2048); % duration of remain ofdm symbols in slot
+SystemParams.nSymbolPerSlot = 7;
+SystemParams.nSymbolPerSubframe = 2 * nSymbolPerSlot;
+
+ChannelConfig.channelType = 'EVehA'; % AWGN, EVehA;
+
 
 
