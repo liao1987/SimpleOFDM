@@ -2,6 +2,7 @@
 % Created by Ktliao, 20130221
 %% System parameter initialization
 %*Note
+global SystemParams;
 SystemParams.samplingFrequency = 15e3;
 SystemParams.frequencySpacing = 15e3;
 SystemParams.llrClipping = 100;
@@ -29,6 +30,10 @@ SystemParams.nSymbolPerSlot = 7;
 SystemParams.nSymbolPerSubframe = 2 * nSymbolPerSlot;
 
 ChannelConfig.channelType = 'EVehA'; % AWGN, EVehA;
+
+
+
+
 
 
 
